@@ -132,7 +132,7 @@ class TMXParser(object):
             self.source = []
             self.target = []
         if (name == u"tuv"):
-            self.tuv_lang = attributes["xml:lang"]
+            self.tuv_lang = LanguageCode(attributes["xml:lang"]).TMX_form()
         if (name == u"seg"):
             self.seg = u""
             self.in_seg = True
